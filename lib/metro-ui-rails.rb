@@ -1,9 +1,10 @@
-require "metro-ui-rails/version"
-
 module Metro
   module Ui
     module Rails
-      # Your code goes here...
+      require 'metro/ui/rails/engine' if defined?(Rails)
     end
   end
 end
+
+require 'less-rails'
+require 'metro/ui/rails/metro' if defined?(Rails)
