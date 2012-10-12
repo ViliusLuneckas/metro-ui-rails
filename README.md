@@ -1,6 +1,6 @@
-# Metro::Ui::Rails
+# Metro UI for Rails 3.1 Asset Pipeline
 
-TODO: Write a gem description
+This gem integrates [Metro-UI-CSS](https://github.com/olton/Metro-UI-CSS) toolkit into Rails 3.1 Asset Pipeline. 
 
 ## Installation
 
@@ -12,18 +12,31 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+## Installing to Rails project:
 
-    $ gem install metro-ui-rails
+Require metro-ui/metro.less in your application.less:
 
-## Usage
+    @import 'metro-ui/modern.less';
+    @import 'metro-ui/modern-responsive.less'; // for responsive design
 
-TODO: Write usage instructions here
+And then require metro-ui in your js or coffee application file:
 
-## Contributing
+    #= require metro-ui
 
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+
+## Layout generator
+
+You can generate Metro UI compatible .erb layout.
+
+Usage:
+    
+    rails generate metro:layout [LAYOUT_NAME]
+
+Example:
+
+    rails generate metro:layout application
+
+## License
+
+This project only integrates [Metro-UI-CSS](https://github.com/olton/Metro-UI-CSS), 
+thus all credits go to Sergey Pimenov, see his [license](https://github.com/olton/Metro-UI-CSS).
