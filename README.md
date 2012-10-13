@@ -1,6 +1,8 @@
 # Metro UI for Rails 3.1 Asset Pipeline
 
-This gem integrates [Metro-UI-CSS](https://github.com/olton/Metro-UI-CSS) toolkit into Rails 3.1 Asset Pipeline. 
+This gem integrates [Metro-UI-CSS](https://github.com/olton/Metro-UI-CSS) toolkit into Rails 3.1 Asset Pipeline.
+
+[![Code Climate](https://codeclimate.com/badge.png)](https://codeclimate.com/github/ViliusLuneckas/metro-ui-rails)
 
 ## Installation
 
