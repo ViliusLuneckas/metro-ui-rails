@@ -8,7 +8,7 @@ Gem::Specification.new do |gem|
   gem.version       = Metro::Ui::Rails::VERSION
   gem.authors       = ["Vilius Luneckas"]
   gem.email         = ["vilius.luneckas@gmail.com"]
-  gem.description   = %q{metro-ui-rails projekt integrates Metro-UI CSS toolkit for Rails 3.1 Asset Pipeline}
+  gem.description   = %q{metro-ui-rails project integrates Metro-UI CSS toolkit for Rails 3.1 Asset Pipeline}
   gem.summary       = %q{Metro-UI CSS toolkit for Rails 3.1 Asset Pipeline}
   gem.homepage      = "https://github.com/viliusluneckas/metro-ui-rails"
 
