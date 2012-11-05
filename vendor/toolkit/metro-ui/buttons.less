@@ -44,21 +44,27 @@ button, .button {
     #font > .control;
     min-width: 90px;
     min-height: 32px;
+    height: 32px;
     background-color: #ccc;
     border: 1px transparent solid;
     color: #353535;
     margin-right: 10px;
     margin-bottom: 10px;
     border-raduis: 0;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
 
     &:active, &.default:active {
-        background-color: #000;
+        background-color: #000 !important;
         color: #fff;
     }
 
-    &:disabled {
+    &:disabled, &.disabled {
         background-color: #eaeaea;
         color: #bebebe;
+        cursor: not-allowed;
     }
 
     &.default {
@@ -70,6 +76,24 @@ button, .button {
         outline: 0;
         border: 1px #353535 dotted;
     }
+
+    &:hover {
+    }
+
+    &.mini {
+        min-height: 22px;
+        height: 22px;
+        font-size: 8pt;
+    }
+    &.big {
+        min-height: 48px;
+        height: 48px;
+        font-size: 8pt;
+    }
+}
+
+a.button {
+    padding: 5px 0;
 }
 
 .command-button {
@@ -96,29 +120,94 @@ button, .button {
 }
 
 .tool-button {
+    .button;
     min-width: 32px;
     min-height: 32px;
     width: 32px;
     height: 32px;
-    padding-top: 3px;
+    text-align: center;
+    position: relative;
+    padding: 0;
 
     img {
         width: 16px;
         height: 16px;
-        margin: 0;
-        padding: 0;
-        display: inline;
-        float: none;
-        clear: both;
+        position: absolute;
+        top: 8px;
+        left: 8px;
+    }
+}
+
+.toolbar {
+    a, button {
+        .tool-button;
+        margin-right: 0px;
+    }
+
+    a {
+        padding: 5px 0;
+    }
+    .clearfix;
+
+    .toolbar-group {
+        margin-right: 20px;
+        margin-bottom: 10px;
+        float: left;
+    }
+}
+.toolbar-vertical {
+    width: 33px;
+    float: left;
+    margin-right: 10px;
+
+    a, button {
+        .tool-button;
+        margin-bottom: 5px;
+    }
+
+    a {
+        padding: 5px 0;
+    }
+    .clearfix;
+
+    .toolbar-group {
+        margin-bottom: 20px;
+    }
+}
+
+.image-button {
+    position: relative;
+    border: 0;
+    padding-right: 38px;
+
+    img, &:active img {
+        position: absolute;
+        right: 0;
+        margin-left: 32px;
+        padding: 5px;
+        height: 100%;
+        top: 0px;
+        margin-left: 0px;
+        box-sizing: border-box;
+        border: 1px transparent solid;
+        z-index: 1001;
     }
 }
 
 .button-set {
-    button {
+    a, button {
         margin-right: 0;
+        text-align: center;
+        img {
+            background-color: transparent;
+        }
+    }
+    a {
+        padding: 5px 0;
     }
     button.active {
         background-color: #008287;
         color: #fff;
     }
 }
+
