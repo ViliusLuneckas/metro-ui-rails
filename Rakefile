@@ -20,13 +20,15 @@ task :stylesheets do
   Dir.glob("Metro-UI-CSS/less/*.less").each do |path|
     less = File.read(path)
 
-    # quick fix for image paths
-    less.gsub! /url\(..\/images\/([-_.a-zA-Z0-9]+)\)/, "image-url('metro-ui/\\1')"
+    regexp = /url\(..\/images\/([-_.a-zA-Z0-9]+)\)/
 
-    if image = $1
-      # copy only required images
-      FileUtils.cp "Metro-UI-CSS/public/images/#{image}", images_path
+    # copy only required images
+    less.scan(regexp).each do |images|
+      FileUtils.cp "Metro-UI-CSS/public/images/#{images.first}", images_path
     end
+
+    # fix for image paths
+    less.gsub! regexp, "image-url('metro-ui/\\1')"
 
     basename = Pathname.new(path).basename
     destination_file = "vendor/toolkit/metro-ui/#{basename}"
