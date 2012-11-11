@@ -1,10 +1,12 @@
+/*
+ * Metro UI CSS
+ * Copyright 2012 Sergey Pimenov
+ * Licensed under the MIT Lilcense
+ *
+ * responsive.less
+ */
+
 /* Landscape phones and down */
-@tileSmall:             120px;
-@tileLarge:             250px;
-@tileMargin:            5px;
-@tileDouble:            @tileSmall * 2 + @tileMargin * 2;
-@tileTriple:            @tileSmall * 3 + @tileMargin * 4;
-@tileQuadro:            @tileSmall * 4 + @tileMargin * 6;
 
 @media (max-width: 480px) {
     .page.secondary {
@@ -31,7 +33,7 @@
     .page.fixed-header {
         .page-header {
             position: relative !important;
-        //display: none !important;
+
             .page-header-content {
                 .user-login {
                     float: right;
@@ -108,65 +110,9 @@
                 width: 100%;
                 border: 0;
                 left: 10px;
-            //top: -2px;
             }
 
         }
-    }
-
-
-    .tile {
-        width: @tileSmall;
-        height: @tileSmall;
-
-        &.double {
-            width: @tileDouble;
-
-            & .tile-content {
-                width: @tileDouble;
-            }
-        }
-        &.triple {
-            width: @tileTriple;
-
-            & .tile-content {
-                width: @tileTriple;
-            }
-        }
-        &.quadro {
-            width: @tileQuadro;
-
-            & .tile-content {
-                width: @tileQuadro;
-            }
-        }
-        &.double-vertical {
-            height: @tileDouble;
-
-            & .tile-content {
-                height: @tileDouble - 40;
-            }
-        }
-        &.triple-vertical {
-            height: @tileTriple;
-
-            & .tile-content {
-                height: @tileTriple - 40;
-            }
-        }
-        &.quadro-vertical {
-            height: @tileQuadro;
-
-            & .tile-content {
-                height: @tileQuadro - 40;
-            }
-        }
-
-    }
-
-    .tile-group {
-        max-width: 400px;
-        float: none;
     }
 
     table {
@@ -192,4 +138,10 @@
     h2 {font-size: 16pt; line-height: 16px;}
     h3 {font-size: 13pt; line-height: 16px;}
     h3 {font-size: 13pt; line-height: 14px;}
+
+    .tile-group {
+        max-width: 400px;
+        float: none;
+    }
+
 }

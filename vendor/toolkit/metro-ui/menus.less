@@ -1,5 +1,5 @@
 /*
- * Metro UI CSS v 0.1.1
+ * Metro UI CSS
  * Copyright 2012 Sergey Pimenov
  * Licensed under the MIT Lilcense
  *
@@ -14,16 +14,17 @@
     z-index: 10000;
 
     .navigation-bar-inner {
-        padding: 5px 20px;
+        padding: 5px 20px 5px 20px;
         color: #fff;
         font-size: 11pt;
         margin: auto;
         position: relative;
 
         & > .brand {
+            position: relative;
             float: left;
             margin-right: 20px;
-            margin-top: 0px;
+            margin-top: 3px;
 
             &:hover {
                 background-color: transparent;
@@ -35,6 +36,11 @@
                 float: left;
                 margin-right: 10px;
                 margin-top: 3px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             .name {
@@ -42,21 +48,62 @@
                 font-size: 16pt;
                 color: #fff;
             }
+
+            &.sub-menu {
+                cursor: pointer;
+                .dropdown-menu {
+                    margin-top: -10px;
+                }
+                &:after {
+                    position: absolute;
+                    content: "\3009";
+                    display: inline-block;
+                    font-size: 10pt;
+                    left: 100%;
+                    top: 20px;
+                    margin-left: 5px;
+                    .rotate(90deg);
+                }
+            }
         }
 
         & > ul {
             .unstyled;
             padding-top: 5px;
+            margin-top: 2px;
 
             & > li {
                 display: inline-block;
                 line-height: 32px;
                 position: relative;
 
+                &.sub-menu {
+                    padding-right: 20px;
+                    &:after {
+                        position: absolute;
+                        content: "\3009";
+                        display: inline-block;
+                        font-size: 10pt;
+                        font-family: Helvetica, sans-serif, sans;
+                        letter-spacing: 0px;
+                        top: 3px;
+                        right: 10px;
+                        .rotate(90deg);
+                        cursor: pointer;
+                    }
+
+                    &:hover {
+                        &:after {
+                            color: #1e1e1e;
+                        }
+                    }
+                }
+
                 & > a {
                     color: #fff;
                     #font > .navigation;
                     padding: 5px 10px;
+                    cursor: pointer;
                 }
 
                 &.active, &:hover {
@@ -70,8 +117,16 @@
                 & > .dropdown-menu {
                     border: 0;
                 }
+
+                &.no-hover {
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
             }
         }
+
+        .clearfix;
     }
 
     &.fixed-top {
@@ -110,7 +165,7 @@
     background-color: #fff;
     .unstyled;
     top: 100%;
-    z-index: 1001;
+    z-index: 1101;
     float: left;
     border: 1px solid rgba(0, 0, 0, 0.2);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -132,6 +187,7 @@
         padding: 3px 20px;
         white-space: nowrap;
         font-size: 14px;
+        cursor: pointer;
 
         &:hover {
             .bg-color-blue;

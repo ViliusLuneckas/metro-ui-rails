@@ -1,5 +1,5 @@
 /*
- * Metro UI CSS v 0.1.1
+ * Metro UI CSS
  * Copyright 2012 Sergey Pimenov
  * Licensed under the MIT Lilcense
  *
@@ -72,6 +72,9 @@
 
 .grid {
     margin: 0 0 20px;
+    display: block;
+    height: auto;
+    width: 100%;
 
     &.no-margin {
         margin: 0;
@@ -96,6 +99,7 @@
     .row {
         width: 100%;
         .clearfix();
+
         [class*="span"] {
             float: left;
         }
