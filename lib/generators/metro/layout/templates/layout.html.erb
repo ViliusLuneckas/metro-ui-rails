@@ -37,16 +37,18 @@
 
   <body class="modern-ui">
     <div class="page">
-      <div class="navigation-bar">
-        <div class="navigation-bar-inner">
-          <span class="menu-pull"></span>
+      <div class="nav-bar">
+        <div class="nav-bar-inner padding10">
+          <span class="pull-menu"></span>
 
-          <div class="brand">
-            <a href="/"><span class="metro-ui-logo place-left"></span></a>
-            <a href="/"><span class="name"><%= app_name %></span></a>
-          </div>
+          <a href="/">
+            <span class="element brand">
+              <span class="metro-ui-logo place-left"></span>
+              <span class="name"><%= app_name %></span>
+            </span>
+          </a>
 
-          <ul>
+          <ul class="menu">
             <li><%%= link_to "Home", "/" %></li>
 
             <li data-role="dropdown">
@@ -72,9 +74,10 @@
         </div>
       </div>
 
-      <div class="header-bar">
-          <div class="header-bar-inner bg-color-darken" style="padding: 10px 10px 5px;">
-            <p class="tertiary-text fg-color-white">&copy; Company 2012</p>
+
+      <div class="nav-bar">
+          <div class="nav-bar-inner" style="padding: 10px 10px 5px;">
+            <span class="element">&copy; Company 2012</span>
           </div>
         </div>
 
