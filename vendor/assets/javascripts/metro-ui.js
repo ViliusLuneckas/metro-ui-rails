@@ -3,6 +3,7 @@
 //= require metro-ui/dropdown
 //= require metro-ui/slider
 //= require metro-ui/tile-slider
+//= require metro-ui/tile-drag
 //= require metro-ui/pagecontrol
 //= require metro-ui/carousel
 //= require metro-ui/buttonset
