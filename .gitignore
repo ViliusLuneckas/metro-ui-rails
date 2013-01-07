@@ -18,3 +18,4 @@ tmp
 .idea
 .DS_Store
 .rbenv-version
+*.un~
