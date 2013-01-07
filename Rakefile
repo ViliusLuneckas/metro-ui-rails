@@ -31,7 +31,7 @@ task :stylesheets do
     less.gsub! regexp, "image-url('metro-ui/\\1')"
 
 
-    regexp = /url\(\'..\/fonts\/([-_.a-zA-Z0-9]+)[\#\?]?\#?\w+'\)/
+    regexp = /url\(\'..\/fonts\/([-_.a-zA-Z0-9]+)(\?\#iefix|\#iconFont)?'\)/ 
 
     # fix for font paths
     less.gsub! regexp, "font-url('metro-ui/\\1')"
