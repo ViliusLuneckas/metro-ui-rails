@@ -6,15 +6,22 @@ This gem integrates [Metro-UI-CSS](https://github.com/olton/Metro-UI-CSS) toolki
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
+Add these lines to your application's Gemfile:
+    
+    gem 'therubyracer'
     gem 'metro-ui-rails'
 
-And then execute:
+And then execute in command line:
 
     $ bundle
 
 ## Installing to Rails project:
+
+Run rails generator:
+
+    rails generate metro:install
+    
+### Or install it manually
 
 Require metro-ui/metro.less in your application.less:
 
