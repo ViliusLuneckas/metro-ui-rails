@@ -1,5 +1,6 @@
 //= require metro-ui/accordion
 //= require metro-ui/buttonset
+//= require metro-ui/calendar
 //= require metro-ui/carousel
 //= require metro-ui/dialog
 //= require metro-ui/dropdown
