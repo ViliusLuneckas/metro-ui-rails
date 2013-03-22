@@ -1,9 +1,10 @@
 /*
  * Metro UI CSS
- * Copyright 2012 Sergey Pimenov
- * Licensed under the MIT License
+ * (c) 2012-2013 by Sergey Pimenov
+ * Licensed under the MIT License and Commercial
  *
- * Buttons.less
+ * Butoons.less
+ *
  */
 
 @logo: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGESURBVFhH7ZevTsNQFIfbZgKxB9gjIHgABAIcS0CSQIJE4LEIEgQCyQNMIiHhIRAgEAgECWKIySUTCEjLd3t/Cyml3em6DtMvOTn33PM3XdvbBU2SJMmKlssnjuNtZIisa2t50HQNmXAFEvQHsi9X89CzR8M31/wXZwppDpp0aX7v++XBd41q7r5Qg1I0YE8pQYixqbWFpzAMx1pnoPA5vlOZpdDzHdWPoujZGVX4c1iaH8pvhpwJshOpxtxQawM18JYdrlYXdbKIAa4o1pFphrxX8g5qD0CRPsUeZZogfkzeLjJaxAAjZIuit9oqhbgv4veQl+lGFQqfGHwdbqpLH1YMMUdK8WjfysxHlgbHyKfiM7B/obAf5LNiemfQyB1E6VkwBfsGlb9ZvduM+aVFQ3cgDV0S+gHlHrs8LqAC5gEcxLuD6c5pbeVJy9qpNECLCV1aK+lPwO86kD0TF5s2KqD2m7Au7QDtAO0A7QD/PsBcf0zIWWVdfMRmcd+M/vsvRxB8A6+/IU2N93KYAAAAAElFTkSuQmCC);
@@ -48,6 +49,14 @@
 
 button, .button {
     #font > .control;
+    font-size: 14px;
+
+    display: inline-block;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle !important;
+
     min-width: 90px;
     min-height: 32px;
     height: 32px;
@@ -57,12 +66,10 @@ button, .button {
     margin-right: 10px;
     margin-bottom: 10px;
     border-raduis: 0;
-    display: inline-block;
-    text-align: center;
-    vertical-align: middle;
     cursor: pointer;
-    padding: 4px 10px;
-    position: relative;
+    width: auto;
+
+    .clearfix;
 
     &.standart {
         min-width: 90px;
@@ -92,6 +99,7 @@ button, .button {
 }
 
 a.button {
+    //padding: 8px 10px;
     &:hover, &:active {
         color: inherit;
     }
@@ -101,12 +109,12 @@ a.button {
 }
 
 button, .button, .tool-button {
-
     &.mini {
-        min-height: 24px;
-        min-width: 24px;
-        height: 26px;
-        font-size: .8em;
+        min-height: 20px;
+        min-width: 20px;
+        height: 14px;
+        font-size: .75em !important;
+        padding-top: 0px !important;
     }
     &.big {
         min-height: 48px;
@@ -128,6 +136,7 @@ button, .button, .tool-button {
 }
 
 .command-button {
+    display: inline-block;
     width: 330px;
     text-align: left;
     padding: 10px 20px;
@@ -163,9 +172,7 @@ button, .button, .tool-button {
     img {
         width: 16px;
         height: 16px;
-        position: absolute;
         top: 8px;
-        left: 8px;
     }
 }
 
@@ -279,8 +286,9 @@ button, .button, .tool-button {
     & > .icon {
         margin-top: .25em;
         margin-bottom: .25em;
-        font-size: 32px;
         color: #888;
+        display: block;
+        float: none;
     }
     & > .label {
         display: block;
@@ -299,11 +307,12 @@ button, .button, .tool-button {
         display: block;
         font-size: 9pt;
         color: #fff;
+        line-height: 11pt;
     }
 }
 
 a.shortcut {
-    padding: 30px 0;
+    padding: 12px 0;
     .label {
         font-size: 9pt;
     }
