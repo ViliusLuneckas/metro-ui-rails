@@ -31,10 +31,11 @@ task :stylesheets do
     less.gsub! regexp, "image-url('metro-ui/\\1')"
 
 
-    regexp = /url\(\'..\/fonts\/([-_.a-zA-Z0-9]+)(\?\#iefix|\#iconFont)?'\)/ 
-
     # fix for font paths
-    less.gsub! regexp, "font-url('metro-ui/\\1')"
+    font_path_regexp = /@IconFontPath:\s*\".*\"/
+    font_url_helper_regexp = /url\('@{IconFontPath}/
+    less.gsub! font_path_regexp, "@IconFontPath: \"metro-ui\""
+    less.gsub! font_url_helper_regexp, "font-url('@{IconFontPath}"
 
     basename = Pathname.new(path).basename
     destination_file = "vendor/toolkit/metro-ui/#{basename}"
@@ -49,8 +50,9 @@ task :javascripts do
   FileUtils.mkdir_p path
   js_files = Dir.glob("Metro-UI-CSS/javascript/*.js")
   FileUtils.cp js_files, path
-
+  FileUtils.cp 'Metro-UI-CSS/public/js/assets/jquery.mousewheel.min.js', 'vendor/assets/javascripts'
   File.open('vendor/assets/javascripts/metro-ui.js', 'w') do |output|
+    output.write "//= require jquery.mousewheel.min.js\n"
     js_files.each do |f|
       js_file = Pathname.new(f).basename.to_s.gsub('.js', '')
       output.write "//= require metro-ui/#{js_file}\n"

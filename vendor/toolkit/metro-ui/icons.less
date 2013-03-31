@@ -8,17 +8,17 @@
  */
 
 @IconFontName:   "iconFont";
-@IconFontPath:   "../fonts";
+@IconFontPath: "metro-ui";
 @borderColor:       #eee;
 @iconMuted:         #eee;
 
 @font-face {
     font-family: @IconFontName;
-    src:url('@{IconFontPath}/@{IconFontName}.eot');
-    src:url('@{IconFontPath}/@{IconFontName}.eot?#iefix') format('embedded-opentype'),
-        url('@{IconFontPath}/@{IconFontName}.svg#iconFont') format('svg'),
-        url('@{IconFontPath}/@{IconFontName}.woff') format('woff'),
-        url('@{IconFontPath}/@{IconFontName}.ttf') format('truetype');
+    src:font-url('@{IconFontPath}/@{IconFontName}.eot');
+    src:font-url('@{IconFontPath}/@{IconFontName}.eot?#iefix') format('embedded-opentype'),
+        font-url('@{IconFontPath}/@{IconFontName}.svg#iconFont') format('svg'),
+        font-url('@{IconFontPath}/@{IconFontName}.woff') format('woff'),
+        font-url('@{IconFontPath}/@{IconFontName}.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
