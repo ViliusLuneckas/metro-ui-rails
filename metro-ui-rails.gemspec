@@ -15,6 +15,6 @@ Gem::Specification.new do |gem|
   gem.files         = `git ls-files`.split($/)
   gem.require_paths = ["lib"]
 
-  gem.add_runtime_dependency 'less-rails', '~> 2.2.3'
+  gem.add_runtime_dependency 'less-rails', '> 2.2.3'
   gem.add_development_dependency 'rails', '>= 3.1'
 end
